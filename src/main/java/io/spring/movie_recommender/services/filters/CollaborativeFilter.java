@@ -2,6 +2,8 @@ package io.spring.movie_recommender.services.filters;
 
 
 import io.spring.movie_recommender.models.Movie;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -9,8 +11,11 @@ import java.util.List;
 
 @Component(MovieFiltersNames.COLLABORATIVE_FILTER_BEAN_NAME)
 public class CollaborativeFilter implements MoviesFilter {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     public CollaborativeFilter() {
-        System.out.println("The CollaborativeFilter bean constructor was called, creating the bean ..");
+        logger.warn("In ContentBasedFilter constructor method");
     }
 
     public List<Movie> getRecommendations(String movie) {

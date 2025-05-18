@@ -36,7 +36,7 @@ public class ContentBasedFilter implements MoviesFilter {
     }
 
     public List<Movie> getRecommendations(String movie) {
-        return List.of(new Movie(1, "Happy Feet", 7.1),
+        return List.of(new Movie(1, "hi there 1.0", 7.1),
                 new Movie(2, "Ice Age", 7.3),
                 new Movie(3, "Shark Tale", 7.7));
     }
